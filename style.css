@@ -12,7 +12,7 @@ body {
 .head-row {
     display: flex;
     position: absolute;
-    z-index: 10;
+    z-index: 5;
 
     background-color: rgb(20, 18, 28);
 
@@ -39,27 +39,6 @@ body {
     height: 32px;
 }
 
-.buttonMenu {
-    background-color: rgba(240, 248, 255, 0);
-    border-color: rgba(250, 235, 215, 0);
-    height: 50px;
-    width: 50px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-radius: 50%;
-    /* Imposta il raggio degli angoli, regola il valore come preferisci */
-    transition: background-color 0.10s ease;
-    /* Transizione fluida per l'hover */
-}
-
-.buttonMenu:hover {
-    background-color: rgba(232, 222, 210, 0.037);
-    border: 1px solid aliceblue;
-}
-
 .sidebarLeft,
 .sidebarRigth {
     font-family: 'Times New Roman', Times, serif;
@@ -81,9 +60,8 @@ body {
     background-color: rgb(52, 46, 74);
 }
 
-
 .titleRigth {
-    background-color: rgba(8, 18, 31, 0.605);
+    background-color: rgba(8, 18, 31, 0.292);
     box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.516);
 
     position: relative;
@@ -118,6 +96,59 @@ body {
     /* centro verticale */
 }
 
+.menuColonna {
+    display: flex;
+    color: black;
+    background-color: hsla(225, 3%, 75%, 0.06);
+    z-index: 10;
+
+    width: 30%;
+    height: 60px;
+
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    /* Nasconde l'elemento fuori dallo schermo a destra */
+    transition: transform 0.3s ease-out;
+    /* Animazione fluida */
+}
+
+.buttonMenu-1{
+    background-color: rgba(240, 248, 255, 0);
+    border-color: rgba(250, 235, 215, 0);
+    height: 50px;
+    width: 50px;
+    z-index: 15;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    /* Imposta il raggio degli angoli, regola il valore come preferisci */
+    transition: background-color 0.10s ease;
+    /* Transizione fluida per l'hover */
+}
+
+.buttonMenu-1:hover{
+    background-color: rgb(20, 18, 28);
+}
+
+.menuColonna.is-open {
+    transform: translateX(0);
+}
+
+.elenco{
+    padding-left: 10%;
+    color: aliceblue;
+}
+
 .scopri {
     display: flex;
     position: absolute;
@@ -137,8 +168,9 @@ body {
     border: 1px solid #ccc;
     border-radius: 9999px;
     /* super arrotondato */
-    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.516);
-    background-color: aliceblue;
+    box-shadow: -5px 0px 10px rgb(27, 27, 27);
+    background-color: rgb(255, 255, 255);
+    transition: border-width 0.4s ease;
 }
 
 .right-arrow {
@@ -157,8 +189,8 @@ body {
     transform: translateX(0);
 }
 
-.scopri:hover .insideButton {
-    font-weight: bold;
+.scopri:hover {
+    border-color: black;
 }
 
 .presentation {
@@ -177,7 +209,6 @@ body {
 
 .buttonScopri {
     border-radius: 20%;
-
 }
 
 .bg-video {
@@ -211,4 +242,90 @@ body {
     /* centro verticale */
 
     flex-direction: column;
+}
+
+/*ADATTAMENTO AI TELEFONI (max-width 768px)*/
+@media (max-width: 768px) {
+    html, body, .presentation {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .head-row {
+        position: fixed;
+        height: 50px; 
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 0.8em; 
+    }
+
+    .header-left-content img {
+        height: 24px; 
+    }
+    
+    .menuLogo {
+        height: 24px;
+    }
+
+    .presentation {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .sidebarLeft,
+    .sidebarRigth {
+        width: 100%;
+        height: auto; 
+        font-size: 40px; 
+        position: absolute; 
+    }
+
+    .sidebarLeft{
+        top: 150px; 
+    }
+
+    .titleRigth,
+    .titleLeft {
+        height: auto;
+    }
+
+    .bg-video {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+
+    .scopri {
+        position: fixed;
+        bottom: 70px; 
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 6;
+        width: 250px; 
+
+        margin-bottom: 20px;
+    }
+
+    .foot-row {
+        position: fixed; 
+        bottom: 0;
+        z-index: 7;
+        width: 100%;
+        padding: 10px 0; 
+        font-size: 0.7em; 
+    }
+    
+    .foot-row img {
+        height: 15px;
+    }
+    
+    .menuColonna {
+        width: 75%; 
+        margin-top: 50px; 
+    }
 }

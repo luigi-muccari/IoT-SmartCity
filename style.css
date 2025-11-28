@@ -4,26 +4,29 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+a:focus, button:focus {
+    outline: 2px solid #4da6ff;
+    outline-offset: 3px;
+    border-radius: 5px;
 }
 
 .head-row {
     display: flex;
-    position: absolute;
-    z-index: 5;
-
+    position: fixed; 
+    top: 0;
+    z-index: 15;
     background-color: rgb(20, 18, 28);
-
     height: 60px;
     width: 100%;
-
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
     align-items: center;
-
     color: aliceblue;
     font-weight: bold;
     justify-content: space-between;
@@ -39,104 +42,80 @@ body {
     height: 32px;
 }
 
+main.presentation {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+    margin-top: 60px; 
+    height: calc(100vh - 60px - 70px); 
+}
+
 .sidebarLeft,
 .sidebarRigth {
     font-family: 'Times New Roman', Times, serif;
     width: 50%;
-    height: 100vh;
+    height: 100%;
     color: aliceblue;
     font-size: 80px;
     text-align: center;
-
     display: flex;
-    /* attiva flexbox */
     justify-content: center;
-    /* centro orizzontale */
     align-items: center;
-    /* centro verticale */
+    position: relative;
 }
 
 .sidebarLeft {
     background-color: rgb(52, 46, 74);
 }
 
-.titleRigth {
+.titleRigth, .titleLeft {
     background-color: rgba(8, 18, 31, 0.605);
     box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.516);
-
     position: relative;
     z-index: 3;
-
     width: 100%;
-    height: 100vh;
-
+    height: 100%;
     display: flex;
-    /* attiva flexbox */
     justify-content: center;
-    /* centro orizzontale */
     align-items: center;
-    /* centro verticale */
-}
-
-.titleLeft {
-    background-color: rgba(8, 18, 31, 0.605);
-    box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.516);
-
-    position: relative;
-    z-index: 3;
-
-    width: 100%;
-    height: 100vh;
-
-    display: flex;
-    /* attiva flexbox */
-    justify-content: center;
-    /* centro orizzontale */
-    align-items: center;
-    /* centro verticale */
 }
 
 .menuColonna {
     display: flex;
-    color: black;
-    background-color: hsla(225, 3%, 75%, 0.06);
+    color: rgb(20, 18, 28);
+    background-color: hsla(225, 3%, 75%, 0.98);
     box-shadow: -5px 0px 10px rgb(27, 27, 27);
-    z-index: 10;
-
-    width: 30%;
-    height: 60px;
-
-    border-top-left-radius: 9999px;
-    border-bottom-left-radius: 9999px;
-    justify-content: space-between;
-    align-items: center;
-
-    position: absolute;
+    z-index: 20;
+    width: 30%; /* Larghezza desktop */
+    height: auto;
+    border-radius: 0 0 0 15px;
+    flex-direction: column;
+    position: fixed;
     right: 0;
-    top: 0;
+    top: 60px;
     transform: translateX(110%);
-    transition: transform 0.3s ease-out;
-    /* Animazione fluida */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease;
+    padding: 20px 0;
+    min-height: calc(100vh - 60px);
 }
 
 .buttonMenu-1{
-    background-color: rgba(240, 248, 255, 0);
-    border-color: rgba(250, 235, 215, 0);
+    background-color: transparent;
+    border: none;
     height: 50px;
     width: 50px;
     z-index: 15;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 50%;
     transition: background-color 0.10s ease;
-    /* Transizione fluida per l'hover */
+    cursor: pointer;
 }
 
-.buttonMenu-1:hover{
-    background-color: rgb(20, 18, 28);
+.buttonMenu-1:hover, .buttonMenu-1:focus {
+    background-color: rgb(40, 38, 48);
 }
 
 .menuColonna.is-open {
@@ -145,31 +124,44 @@ body {
 
 .elenco{
     padding-left: 10%;
-    color: aliceblue;
+    list-style: none;
+    width: 100%;
+}
+
+.elenco li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.elenco li a:hover, .elenco li a:focus {
+    color: #4da6ff;
 }
 
 .scopri {
     display: flex;
-    position: absolute;
+    position: fixed;
     transform: translateX(-50%);
     left: 50%;
-    z-index: 5;
-    bottom: 20%;
-
+    z-index: 10;
+    top: 70vh;
     height: 50px;
     width: 300px;
-
     justify-content: space-between;
     align-items: center;
     padding-left: 20px;
-
     font-size: 20px;
     border: 1px solid #ccc;
     border-radius: 9999px;
-    /* super arrotondato */
     box-shadow: -5px 0px 10px rgb(27, 27, 27);
     background-color: rgb(255, 255, 255);
-    transition: border-width 0.4s ease;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 .right-arrow {
@@ -178,166 +170,73 @@ body {
     opacity: 0;
     margin-right: 5px;
     transform: translateX(30px);
-    /* parte spostata a destra */
     transition: all 0.4s ease;
-    /* transizione fluida */
 }
 
-.scopri:hover .right-arrow {
+.scopri:hover .right-arrow, .scopri:focus .right-arrow {
     opacity: 1;
     transform: translateX(0);
 }
 
-.scopri:hover {
+.scopri:hover, .scopri:focus {
     border-color: black;
-}
-
-.presentation {
-    display: flex;
-    height: 100%;
-
-    position: relative;
-    z-index: 1;
-}
-
-.content {
-    position: relative;
-    z-index: -1;
-    visibility: hidden;
-}
-
-.buttonScopri {
-    border-radius: 20%;
+    transform: translateX(-50%) scale(1.02);
 }
 
 .bg-video {
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
     object-fit: cover;
-    width: 50%;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 0;
 }
 
 .foot-row {
     display: flex;
-    position: absolute;
     z-index: 10;
-
     background-color: rgb(20, 18, 28);
     color: aliceblue;
-
-    padding-top: 1%;
-    padding-bottom: 1%;
-    height: auto;
+    padding: 20px 20px;
     width: 100%;
-
     justify-content: center;
-    /* centro orizzontale */
     align-items: center;
-    /* centro verticale */
-
     flex-direction: column;
+    margin-top: auto;
 }
 
-/*ADATTAMENTO AI TELEFONI (max-width 768px)*/
-@media (max-width: 768px) {
-    html, body, .presentation {
-        height: 100vh;
-        overflow-x: hidden;
-    }
+.footer-logo-mobile {
+    height: 32px;
+    margin-bottom: 10px;
+}
 
-    .head-row {
-        position: fixed;
-        height: 40px; 
-        padding-left: 10px;
-        padding-right: 10px;
-        font-size: 0.8em;
-        font-size: 10px;
-    }
+@media screen and (max-width: 768px) {
 
-    .header-left-content img {
-        height: 20px;
-    }
-    
-    .menuLogo {
-        height: 20px;
-    }
-
-    .presentation {
+    /* Layout Principale: da 2 colonne a 1 colonna */
+    main.presentation {
         flex-direction: column;
-        justify-content: center;
-        align-items: center; 
-        height: 100vh;
-        width: 100vw;
+        min-height: auto;
     }
-    
+
     .sidebarLeft,
     .sidebarRigth {
         width: 100%;
-        height: 100%; 
-        font-size: 30px;
-    }
-
-    .sidebarLeft{
-        top: 170px; 
-    }
-
-    .titleRigth,
-    .titleLeft {
-        height: 73.9%;
-        box-shadow: none;
-        font-size: 30px;
-    }
-
-    .titleRigth{
-        white-space: nowrap;
-        margin-bottom: 160px;
-    }
-
-    .bg-video {
-        position: fixed;
-        width: 100vw;
-        height: 91%;
-        top: 0;
-        left: 0;
-    }
-
-    .scopri {
-        position: fixed;
-        bottom: 70px; 
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 6;
-        width: 200px;
-        height: 40px;
-        font-size: 15px;
-    }
-
-    .right-arrow{
-        height: 40px;
-    }
-
-    .foot-row {
-        position: fixed; 
-        bottom: 0;
-        z-index: 7;
-        width: 100%;
-        padding-bottom: 10px;
-        font-size: 0.7em;
-    }
-    
-    .foot-row img {
-        height: 15px;
+        height: 60vh; 
+        font-size: 40px;
     }
     
     .menuColonna {
-        width: 75%; 
-        margin-top: 39px; 
-        background-color: rgba(8, 18, 31, 0.605);
+        width: 75%;
     }
 
-    .buttonMenu-1 {
-        height: 40px;
-        width: 40px;
+    .scopri {
+        bottom: 30px; 
+        width: 85%;
+    }
+    
+    .foot-row p {
+        font-size: 14px;
+        text-align: center;
     }
 }

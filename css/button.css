@@ -1,0 +1,55 @@
+.scopri {
+    display: flex;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 10;
+    top: 80vh;
+    height: 50px;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 9999px;
+    box-shadow: -5px 0px 10px rgb(27, 27, 27);
+    background-color: rgb(255, 255, 255);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.right-arrow {
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    margin-right: 5px;
+    transform: translateX(30px);
+    transition: all 0.4s ease;
+}
+
+.scopri:hover .right-arrow, .scopri:focus .right-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scopri:hover, .scopri:focus {
+    border-color: black;
+    transform: translateX(-50%) scale(1.02);
+}
+
+@media screen and (max-width: 768px) {
+    .scopri {
+        margin-top: 100px;
+        bottom: 30px; 
+        width: 65%;
+        font-size: 15px;
+    }
+
+    .right-arrow{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

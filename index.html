@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetto IoT & Smart City</title>
+    <title>IoT & Smart City</title>
+
     <!--Favicon-->
     <link rel="icon" href="image/favicon/wifi.png" type="image/png">
-    <!-- Collega il CSS -->
-    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/headMenu.css" type="text/css">
+    <link rel="stylesheet" href="css/button.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
+
+    <!-- Font Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header class="head-row">
-        <div class="header-left-content">
-            <img src="image/favicon/wifi.png" alt="Logo Progetto IoT e Smart City">
-            <p>Progetto: IoT & Smart City</p>
-        </div>
+    <div class="cont">
+        <header class="head-row">
+            <div class="header-left-content">
+                <button class="buttonMenu" onclick="window.location.href='index.html'">
+                    <img class="menuLogo" src="image/favicon/wifi.png" alt="Icona Menu">
+                </button>
+                <p>IoT & Smart City</p>
+            </div>
+            
+            <button class="buttonMenu" id="menuButton" onclick="menuShow()">
+                <img class="menuLogo" src="image/img/menu.png" alt="Icona Menu">
+            </button>
 
-        <!-- Bottone menu accessibile con ARIA attributes -->
-        <button class="buttonMenu-1" id="menuButton" aria-label="Apri menu di navigazione" aria-controls="sidebarMenu" aria-expanded="false">
-            <img class="menuLogo" src="image/img/menu.png" alt="Icona Menu">
-        </button>
+            <!-- Menu di navigazione accessibile -->
+            <nav class="menuColonna" id="sidebarMenu">
+                <ul class="elenco">
+                    <ul class="elenco">
+                        <li><a href="frontPage.html#Iot">Sezione Internet of Things (IoT)</a></li>
+                        <li class="in-Li"><a href="frontPage.html#TecnologieIoT">Tecnologie dei dispositivi IoT</a></li>
+                        <li class="in-Li"><a href="frontPage.html#InteroperabilitaIoT">Interoperabilità dei dispositivi IoT</a></li>
+                        <li><a href="frontPage.html#SmartCity">Sezione Smart City</a></li>
+                        <li class="in-Li"><a href="frontPage.html#IotSC">IoT nell’ambito delle Smart Cities</a></li>
+                        <li class="in-Li"><a href="#SCyber">Smart City e Cybersecurity</a></li>
+                        <li><a href="#Conclusioni">Conclusioni</a></li>
+                    </ul>
+                </ul>
+            </nav>
+        </header>
 
-        <!-- Menu di navigazione accessibile -->
-        <nav class="menuColonna" id="sidebarMenu" aria-label="Menu Principale">
-            <ul class="elenco">
-                <!-- Links reali (sostituire # con URL reali) -->
-                <li><a href="#sezione-iot">Sezione Internet of Things (IoT)</a></li>
-                <li><a href="#sezione-smartcity">Sezione Smart City</a></li>
-            </ul>
-        </nav>
-    </header>
+        <a href="frontPage.html" id="buttonScopri" class="scopri">
+            <p class="insideButton">Clicca per scoprire</p>
+            <img class="right-arrow" src="image/img/right-arrow.png" alt="Freccia a destra">
+        </a>
 
-    <!-- Pulsante "Scopri" che funge da link ancorato -->
-    <a href="#contenuto-principale" id="buttonScopri" class="scopri" aria-label="Scopri di più sul contenuto sottostante">
-        <p class="insideButton">Clicca per scoprire</p>
-        <img class="right-arrow" src="image/img/right-arrow.png" alt="Freccia a destra">
-    </a>
-
-    <main class="presentation" id="contenuto-principale">
-        <div class="sidebarLeft" id="sezione-iot">
-            <p class="titleLeft">INTERNET of <br /> THINGS (IoT)</p>
-        </div>
-        <div class="sidebarRigth" id="sezione-smartcity">
-            <p class="titleRigth">SMART CITY</p>
-            <video autoplay muted loop class="bg-video" aria-label="Video di sfondo di una città intelligente">
+        <main class="presentation" id="contenuto-principale">
+            <div class="sidebarLeft" id="sezione-iot">
+                <p class="titleLeft">INTERNET of <br /> THINGS (IoT)</p>
+            </div>
+            <div class="sidebarRigth" id="sezione-smartcity">
+                <p class="titleRigth">SMART <br /> CITY</p>
+            </div>
+            <video autoplay muted loop class="bg-video">
                 <source src="image/bg-video/city.mp4" type="video/mp4">
                 Il tuo browser non supporta il tag video.
             </video>
-        </div>
-    </main>
-
-    <footer class="foot-row">
-        <img class="footer-logo-mobile" src="image/favicon/wifi.png" alt="Logo in fondo alla pagina">
-        <p><br />Muccari Luigi - VE - I.T.T.S. E. Scalfaro</p>
-    </footer>
-
-    <!-- Collega il JavaScript -->
-    <script src="script.js"></script>
-
+        </main>
+        <footer class="foot-row">
+            <img class="footer-logo" src="image/favicon/wifi.png" alt="Logo in fondo alla pagina">
+            <p><br />Muccari Luigi - VE - I.T.T.S. E. Scalfaro</p>
+        </footer>
+    </div>
+    <script src="scritp.js"></script>
 </body>
+
 </html>

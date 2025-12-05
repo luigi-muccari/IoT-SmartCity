@@ -1,0 +1,129 @@
+.head-row {
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 15;
+    background-color: rgb(20, 18, 28);
+    height: 80px;
+    width: 100%;
+    padding: 0 20px;
+
+    align-items: center;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.header-left-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menuLogo {
+    height: 40px;
+}
+
+a:focus,
+button:focus {
+    outline: 2px solid #4da6ff;
+    outline-offset: 3px;
+    border-radius: 5px;
+}
+
+.buttonMenu {
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.10s ease;
+    cursor: pointer;
+}
+
+.buttonMenu:hover,
+.buttonMenu-1:focus {
+    background-color: rgb(40, 38, 48);
+}
+
+
+.menuColonna {
+    display: flex;
+    color: rgb(20, 18, 28);
+    background-color: aliceblue;;
+    box-shadow: -5px 0px 10px rgb(27, 27, 27);
+    z-index: 20;
+    width: 30%;
+    height: auto;
+    border-radius: 0 0 0 15px;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 80px;
+    transform: translateX(110%);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease;
+    padding: 20px 0;
+    min-height: calc(100vh - 60px);
+}
+
+.menuColonna.is-open {
+    transform: translateX(0%);
+}
+
+.elenco {
+    width: 100%;
+}
+
+.elenco li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.elenco li a:hover,
+.elenco li a:focus {
+    color: #4da6ff;
+}
+
+.in-Li {
+    margin-left: 20%;
+    list-style-type: disc;
+}
+
+li {
+    margin-left: 55px;
+        font-size: 20px;
+    margin-right: 55px;
+}
+
+ul {
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .menuColonna {
+        width: 75%;
+        top: 60px;
+    }
+
+    .head-row{
+        font-size: 18px;
+        height: 60px;
+    }
+
+    .menuLogo{
+        height: 30px;
+    }
+
+    .elenco{
+        font-size: 20px;
+    }
+}

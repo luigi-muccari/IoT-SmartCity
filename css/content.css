@@ -1,0 +1,54 @@
+main.cont {
+    flex-grow: 1;
+    position: absolute;
+    z-index: 1;
+    margin-top: 60px;
+    height: 90vh;
+}
+
+.inner-title,
+.title,
+h1.first-title {
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.inner-title,
+.title {
+    padding-top: 30px;
+}
+
+h1.first-title {
+    margin-top: 100px;
+    font-size: 60px;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.inner-title {
+    font-size: 30px;
+}
+
+p.text,
+li {
+    font-size: 20px;
+    margin-right: 55px;
+}
+
+li {
+    margin-left: 55px;
+}
+
+ul {
+    padding-bottom: 30px;
+}
+
+p.text {
+    margin-left: 30px;
+}
+
+li {
+    list-style-type: circle;
+}

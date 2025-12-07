@@ -55,7 +55,8 @@ button:focus {
 .menuColonna {
     display: flex;
     color: rgb(20, 18, 28);
-    background-color: aliceblue;;
+    background-color: rgba(240, 248, 255, 0.89);
+    ;
     box-shadow: -5px 0px 10px rgb(27, 27, 27);
     z-index: 20;
     width: 30%;
@@ -94,18 +95,17 @@ button:focus {
 }
 
 .in-Li {
+    color: black;
     margin-left: 20%;
     list-style-type: disc;
 }
 
-li {
+.sectionLi {
+    color: black;
+    list-style-type: circle;
     margin-left: 55px;
-        font-size: 20px;
+    font-size: 20px;
     margin-right: 55px;
-}
-
-ul {
-    padding-bottom: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -114,16 +114,20 @@ ul {
         top: 60px;
     }
 
-    .head-row{
+    .head-row {
         font-size: 18px;
         height: 60px;
     }
 
-    .menuLogo{
+    .menuLogo {
         height: 30px;
     }
 
-    .elenco{
+    .elenco {
         font-size: 20px;
+    }
+
+    .sectionLi{
+        margin-left: 40px;
     }
 }

@@ -15,11 +15,18 @@
     <link rel="stylesheet" href="css/button.css" type="text/css">
     <link rel="stylesheet" href="css/content.css" type="text/css">
     <link rel="stylesheet" href="css/footer.css" type="text/css">
+    <link rel="stylesheet" href="css/title-img.css" type="text/css">
 
     <!-- Font Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -31,7 +38,7 @@
                 </button>
                 <p>IoT & Smart City</p>
             </div>
-            
+
             <button class="buttonMenu" id="menuButton" onclick="menuShow()">
                 <img class="menuLogo" src="image/img/menu.png" alt="Icona Menu">
             </button>
@@ -39,21 +46,29 @@
             <!-- Menu di navigazione accessibile -->
             <nav class="menuColonna" id="sidebarMenu">
                 <ul class="elenco">
-                    <li><a href="#IoT">Sezione Internet of Things (IoT)</a></li>
+                    <li class="sectionLi"><a href="#IoT">Sezione Internet of Things (IoT)</a></li>
                     <li class="in-Li"><a href="#TecnologieIoT">Tecnologie dei dispositivi IoT</a></li>
                     <li class="in-Li"><a href="#InteroperabilitaIoT">Interoperabilità dei dispositivi IoT</a></li>
-                    <li><a href="#SmartCity">Sezione Smart City</a></li>
+                    <li class="sectionLi"><a href="#SmartCity">Sezione Smart City</a></li>
                     <li class="in-Li"><a href="#IotSC">IoT nell’ambito delle Smart Cities</a></li>
                     <li class="in-Li"><a href="#SCyber">Smart City e Cybersecurity</a></li>
-                    <li><a href="#Conclusioni">Conclusioni</a></li>
+                    <li class="sectionLi"><a href="#Conclusioni">Conclusioni</a></li>
                 </ul>
             </nav>
         </header>
 
         <main class="content" id="contenuto-principale">
-            <div id="IoT">
-                <h1 class="first-title">Internet of Things:</h1>
-                <p class="text">L’ IoT (“Internet of Things”) definisce lo sviluppo tecnologico attraverso il quale gli
+            <div id="IoT" class="target-section">
+                <div class="img-title">
+                    <img class="content-img" src="image/img/2892046_1993.jpg">
+                    <div class="img-overlay">
+                        <h1 class="first-title">Internet of Things:</h1>
+                    </div>
+                </div>
+
+                <p class="text"> <strong>L’IoT (“Internet of Things”)</strong> definisce lo
+                    sviluppo tecnologico
+                    attraverso il quale gli
                     oggetti
                     acquistano
                     un’identità nel mondo digitale, basandosi sull’idea di oggetti interconnessi attraverso la rete
@@ -63,16 +78,19 @@
                     I dispositivo IoT trovano la loro applicazione in numerosi ambiti, dalle Smart Home (case domotiche)
                     agli
                     Smart Building (tramite sensori si effettua la gestione automatica degli impianti dell’edificio per
-                    l’efficientamento energetico) e fino alla Smart-City (“città intelligenti”); in quest’ultimo caso
+                    l’efficientamento energetico) e fino alla <strong>Smart-City (“città intelligenti”)</strong>; in
+                    quest’ultimo caso
                     L’Internet
                     of Things nella Smart City utilizzato per il monitoraggio e la gestione degli elementi di una città.
                 </p>
             </div>
-            <div id="TecnologieIoT">
+            <div id="TecnologieIoT" class="target-section">
                 <h3 class="inner-title">Tecnologie dei dispositivi IoT:</h3>
-                <p class="text">Rendere possibile l’IoT significa presenza e collaborazione di più tecnologie:</p>
+                <p class="text">Rendere possibile l’IoT significa presenza e <strong>collaborazione di più
+                        tecnologie:</strong></p>
                 <ul>
-                    <li>Sensori e attuatori: i sensori sono dispositivi in grado di rilevare cambiamenti nell'ambiente
+                    <li><strong>Sensori e attuatori</strong>: i sensori sono dispositivi in grado di rilevare
+                        cambiamenti nell'ambiente
                         (es. temperatura, umidità, luce, movimento o pressione). Gli attuatori sono dispositivi che
                         possono
                         provocare cambiamenti fisici nell'ambiente, come l'apertura o la chiusura di una valvola o
@@ -80,26 +98,30 @@
                         macchine
                         e dispositivi di interagire con il mondo fisico. L'automazione è possibile quando sensori e
                         attuatori funzionano per risolvere i problemi senza intervento umano.</li>
-
-                    <li>Tecnologie di connettività: per trasmettere i dati IoT da sensori e attuatori al cloud, i
+                    <br>
+                    <li><strong>Tecnologie di connettività</strong>: per trasmettere i dati IoT da sensori e attuatori
+                        al cloud, i
                         dispositivi IoT devono essere connessi a Internet. Sono presenti diverse tecnologie di
                         connettività
                         utilizzate nell'IoT, tra cui Wi-Fi o Bluetooth.</li>
-
-                    <li>Cloud computing: il cloud è il luogo in cui le grandi quantità di dati generati dai dispositivi
+                    <br>
+                    <li><strong>Cloud computing</strong>: il cloud è il luogo in cui le grandi quantità di dati generati
+                        dai dispositivi
                         IoT vengono archiviate, elaborate e analizzate. Le piattaforme di cloud computing forniscono
                         l'infrastruttura e gli strumenti necessari per archiviare e analizzare questi dati, nonché per
                         creare e implementare applicazioni IoT.</li>
-
-                    <li>Analisi dei big data: per dare un senso alle enormi quantità di dati generati dai dispositivi
+                    <br>
+                    <li><strong>Analisi dei big data</strong>: per dare un senso alle enormi quantità di dati generati
+                        dai dispositivi
                         IoT,
                         le aziende devono utilizzare strumenti di analisi avanzati per estrarre informazioni e
                         identificare
                         modelli. Questi strumenti possono includere algoritmi di apprendimento automatico e
                         visualizzazione
                         dei dati. </li>
-
-                    <li>Tecnologie per la sicurezza e la privacy: parallelamente alla sua diffusione, la sicurezza e la
+                    <br>
+                    <li><strong>Tecnologie per la sicurezza e la privacy</strong>: parallelamente alla sua diffusione,
+                        la sicurezza e la
                         privacy dell'IoT diventano sempre più importanti. Tecnologie come la crittografia, i controlli
                         di
                         accesso e i sistemi di rilevamento delle intrusioni vengono utilizzati per proteggere i
@@ -108,18 +130,24 @@
                 </ul>
             </div>
 
-            <div id="InteroperabilitaIoT">
+            <div id="InteroperabilitaIoT" class="target-section">
                 <h3 class="inner-title">Interoperabilità dei dispositivi IoT:</h3>
-                <p class="text">Un aspetto cruciale dell’IoT è l’interoperabilità e la standardizzazione dei dispositivi
-                    e
-                    delle
-                    piattaforme. Per garantire il pieno potenziale dell’IoT, è necessario che i dispositivi possano
+                <p class="text">Un aspetto cruciale dell’IoT è<strong>
+                        l’interoperabilità e la standardizzazione dei dispositivi
+                        e
+                        delle
+                        piattaforme
+                    </strong>. Per garantire il pieno potenziale dell’IoT, è necessario che i dispositivi possano
                     comunicare
                     tra loro in modo fluido e che ci sia coerenza nelle tecnologie e negli standard utilizzati,
                     garantendo
                     una
-                    maggiore compatibilità e l’integrazione senza problemi di dispositivi e servizi IoT.
-                    A quanto detto si aggiunge il concetto di Fog/Edge Computing, un nuovo paradigma che estende il
+                    maggiore<strong> compatibilità e l’integrazione senza problemi di dispositivi e servizi
+                        IoT</strong>.
+                    <br>
+                    <br>
+                    A quanto detto si aggiunge il concetto di <strong>Fog/Edge Computing</strong>, un nuovo paradigma
+                    che estende il
                     modello
                     del
                     Cloud, spostando le risorse più vicino alla produzione dei dati. Questo approccio riduce la latenza
@@ -128,92 +156,115 @@
                     risposte
                     in
                     tempo reale.
-                    Il modello è strutturato su tre livelli:
+                    Il modello è strutturato su <strong>tre livelli</strong>:
                 <ul>
-                    <li>Edge: risorse distribuite ai margini della rete (es. centraline wireless) per micro-operazioni.
+                    <li><strong>Edge</strong>: risorse distribuite ai margini della rete (es. centraline wireless) per
+                        micro-operazioni.
                     </li>
-                    <li>Cloud: utilizzato per elaborazioni complesse e backup.</li>
-                    <li>Core network: infrastruttura centrale di supporto.</li>
+                    <li><strong>Cloud</strong>: utilizzato per elaborazioni complesse e backup.</li>
+                    <li><strong>Core network</strong>: infrastruttura centrale di supporto.</li>
                 </ul>
                 <p class="text">I vantaggi principali sono:</p>
                 <ul>
-                    <li>Velocità: comunicazione in tempo reale tra dispositivi, fondamentale per mobile e Big Data &
+                    <li><strong>Velocit</strong>à: comunicazione in tempo reale tra dispositivi, fondamentale per mobile
+                        e Big Data &
                         Analytics.</li>
-                    <li>Scalabilità: doppio livello (locale e cloud), con espansione resa possibile da micro-data center
+                    <li><strong>Scalabilità</strong>: doppio livello (locale e cloud), con espansione resa possibile da
+                        micro-data center
                         e
                         dispositivi distribuiti.</li>
-                    <li>Resilienza: disponibilità dei dati direttamente sui dispositivi o edge, riducendo i rischi di
+                    <li><strong>Resilienza</strong>: disponibilità dei dati direttamente sui dispositivi o edge,
+                        riducendo i rischi di
                         down
                         del
                         cloud.</li>
-                    <li>Sicurezza: più punti di accesso aumentano la vulnerabilità, ma consentono anche strategie di
+                    <li><strong>Sicurezza</strong>: più punti di accesso aumentano la vulnerabilità, ma consentono anche
+                        strategie di
                         isolamento e difesa mirata.</li>
                 </ul>
                 <p class="text">
                     In sintesi, l’Edge Computing è il tassello abilitante per le moderne applicazioni IoT, garantendo
-                    bassa
-                    latenza,
-                    maggiore efficienza, resilienza e nuove opportunità di sicurezza, grazie alla combinazione sinergica
+                    <strong>
+                        bassa
+                        latenza,
+                        maggiore efficienza, resilienza e nuove opportunità di sicurezza
+                    </strong>, grazie alla combinazione sinergica
                     tra
                     Cloud
                     ed Edge.
                 </p>
             </div>
 
-            <div id="SmartCity">
-                <h1 class="first-title">Cosa sono le Smart-Cities?</h1>
-                <p class="text">Le Smart-Cities sono aree urbane in cui l’utilizzo delle moderne tecnologie digitali
+            <div id="SmartCity" class="target-section">
+                <div class="img-titleSecond">
+                    <img class="content-imgSecond" src="image/img/sentieri-luminosi-sopra-gli-edifici.jpg">
+                    <div class="img-overlaySecond">
+                        <h1 class="first-title">Cosa sono le Smart-Cities?</h1>
+                    </div>
+                </div>
+                <p class="text">Le <strong>Smart-Cities</strong> sono aree urbane in cui l’utilizzo delle moderne
+                    tecnologie digitali
                     ottimizzano e migliorano servizi e le infrastrutture offerte ai cittadini.
-                    In altre parole, una città può definirsi smart quando gli investimenti in capitale umano e sociale,
+                    In altre parole, una città può definirsi smart quando gli investimenti in <strong>capitale umano e
+                        sociale</strong>,
                     le
-                    infrastrutture di comunicazione tradizionali (trasporti) e moderne (ICT), alimentano una crescita
+                    <strong>infrastrutture di comunicazione tradizionali (trasporti)</strong> e <strong>moderne
+                        (ICT)</strong>, alimentano una crescita
                     economica sostenibile e una elevata qualità di vita, con una sapiente gestione delle risorse
                     naturali;
                     esempi ne sono già:
                 </p>
                 <ul>
-                    <li>Barcellona: gestione intelligente dei trasporti e dei rifiuti.</li>
-                    <li>Singapore: monitoraggio ambientale e servizi digitali per i cittadini.</li>
-                    <Li>Milano: sperimentazioni su mobilità elettrica e open data.</Li>
+                    <li><strong>Barcellona</strong>: gestione intelligente dei trasporti e dei rifiuti.</li>
+                    <li><strong>Singapore</strong>: monitoraggio ambientale e servizi digitali per i cittadini.</li>
+                    <Li><strong>Milano</strong>: sperimentazioni su mobilità elettrica e open data.</Li>
                 </ul>
-                <p class="text">Queste città si basano infatti su tecnologie dell'informazione e della comunicazione
-                    (ICT,
-                    information and Communication Technologies) per migliorare la qualità della vita, utilizzate per
+                <p class="text">Queste città si basano infatti su <strong>
+                        tecnologie dell'informazione e della comunicazione
+                        (ICT,
+                        information and Communication Technologies)
+                    </strong> per migliorare la qualità della vita, utilizzate per
                     gestire
                     e trasmettere informazioni in formato digitale.
                     Queste includono:
                 </p>
                 <ul>
-                    <li>Dispositivi hardware (computer, smartphone);</li>
-                    <li>Reti di comunicazione (internet, reti mobili);</li>
-                    <Li>Software e applicazioni per la gestione dei dati.</Li>
+                    <li><strong>Dispositivi hardware</strong> (computer, smartphone);</li>
+                    <li><strong>Reti di comunicazione</strong> (internet, reti mobili);</li>
+                    <Li><strong>Software e applicazioni</strong> per la gestione dei dati.</Li>
                 </ul>
-                <p class="text">L'ICT è fondamentale per facilitare lo scambio rapido di informazioni, migliorare la
-                    produttività e abilitare nuove forme di interazione, sia a livello personale che professionale. È
+                <p class="text">L'ICT è fondamentale per facilitare lo scambio rapido di informazioni, <strong>
+                        migliorare la
+                        produttività e abilitare nuove forme di interazione, sia a livello personale che professionale
+                    </strong>. È
                     utilizzato in settori come l'istruzione, la sanità, il commercio e l'intrattenimento, influenzando
                     ogni
                     aspetto della vita moderna.</p>
             </div>
 
-            <div id="IotSC">
+            <div id="IotSC" class="target-section">
                 <h3 class="inner-title">IoT nell’ambito delle Smart Cities:</h3>
-                <p class="text">L’Internet of Things (IoT) rappresenta la base tecnologica che rende possibile la
+                <p class="text"><strong>L’Internet of Things (IoT)</strong> rappresenta la <strong>base
+                        tecnologica</strong> che rende possibile la
                     trasformazione delle città tradizionali in Smart Cities. Grazie a reti di sensori, attuatori e
                     dispositivi connessi (come precedentemente descritto), l’IoT permette di raccogliere e analizzare
                     enormi
                     quantità di dati in tempo reale, trasformandoli in servizi intelligenti a beneficio dei cittadini.
+                    <br><br>
                     Ogni ambito della Smart City (dalla mobilità alla gestione dell’energia, dall’ambiente alla
                     sicurezza)
                     si fonda sull’uso di dispositivi IoT che monitorano, trasmettono e elaborano informazioni. In questo
                     modo, le città possono diventare più efficienti, sostenibili e inclusive, offrendo soluzioni
                     innovative
                     ai problemi quotidiani.
+                    <br><br>
                     I servizi tipici di una Smart City, infatti, sono organizzati in diversi pilastri tematici, di
                     seguito
                     elencati:
                 </p>
                 <ul>
-                    <li>Smart Environment / Smart Green: riguarda lo sviluppo sostenibile, in termini di riduzione
+                    <li><strong>Smart Environment / Smart Green</strong>: riguarda lo sviluppo sostenibile, in termini
+                        di riduzione
                         dell’ammontare di rifiuti tramite raccolta differenziata, riduzione delle emissioni di gas serra
                         attraverso la limitazione del traffico e all’ottimizzazione delle emissioni industriali. Spesso,
                         quando si parla di smart environement, per rendere una città sempre più intelligente, si
@@ -221,15 +272,27 @@
                         anche altri obiettivi come la razionalizzazione dell’edilizia e il conseguente abbattimento
                         dell’impatto del riscaldamento e della climatizzazione, la razionalizzazione dell’illuminazione
                         pubblica.</li>
-                    <li>• Smart Energy: un cambiamento già in atto che sta trasformando il nostro presente, in cui si ha
+                    <br>
+                    <li><strong>Smart Energy</strong>: un cambiamento già in atto che sta trasformando il nostro
+                        presente, in cui si ha
                         l’integrazione e il coordinamento di tutte quelle applicazioni, soluzioni e progettualità per la
                         gestione dell'energia. Queste consentono un vero e proprio miglioramento dell’efficienza
                         energetica
                         di case, edifici e impianti. La smart energy, poi, cerca anche di ottimizzare il livello di
                         comfort
                         per chi occupa degli spazi smart. In sostanza il concetto di Smart Energy si può riassumere in
-                        secondo 3 concetti:</li>
-                    <Li>Smart Governance: Un governo moderno con chiara visione del proprio sviluppo, sapendo tracciare
+                        secondo 3 concetti:
+                        <ul>
+                            <li><strong>Digitalizzazione</strong>, grazie a tecnologie intelligenti e interconnesse.
+                            </li>
+                            <li><strong>Integrazione</strong>, combinazione di diverse fonti energetiche, in particolare
+                                di quelle rinnovabili.</li>
+                            <li><strong>Ruolo attivo del consumatore</strong>, il quale mette in atto comportamenti che
+                                favoriscono il risparmio energetico.</li>
+                        </ul>
+                    </li>
+                    <Li><strong>Smart Governance</strong>: Un governo moderno con chiara visione del proprio sviluppo,
+                        sapendo tracciare
                         linee di azione che coinvolgano davvero i cittadini nelle questioni di interesse pubblico.
                         Questo
                         significa promuovere iniziative di sensibilizzazione e, allo stesso tempo, sfruttare le
@@ -242,21 +305,29 @@
                         trasparenza e la possibilità di comunicare direttamente con la pubblica amministrazione
                         attraverso
                         strumenti digitali. </Li>
-                    <li>Smart Economy: Una smart city deve saper stimolare e promuovere un “sistema intelligente”
+                    <br>
+                    <li><strong>Smart Economy</strong>: Una smart city deve saper stimolare e promuovere un “sistema
+                        intelligente”
                         composto
                         dalle imprese private, enti pubblici e istituti di ricerca, impegnandosi nell’armonizzare e nel
                         sostenere le imprese virtuose. Smart economy significa saper innalzare il livello tecnologico
                         generale per creare un ambiente stimolante per le imprese ICT, e quindi processi innovativi
                         sostenuti da tecnologie che danno supporto alle attività economiche.</li>
-                    <li>Smart Building: edifici intelligenti che garantiscono maggiore comfort e migliore gestione di
+                    <br>
+                    <li><strong>Smart Building</strong>: edifici intelligenti che garantiscono maggiore comfort e
+                        migliore gestione di
                         energia e sicurezza, tramite sensori, sistemi di controllo e automazione di varie funzioni, con
                         annessa possibilità di gestione remota dei sistemi che compongono la rete intelligente
                         dell’edificio.</li>
-                    <Li>Smart Mobility: approccio integrato e tecnologicamente avanzato alla mobilità urbana, pensato
+                    <br>
+                    <Li><strong>Smart Mobility</strong>: approccio integrato e tecnologicamente avanzato alla mobilità
+                        urbana, pensato
                         per
                         migliorare l’efficienza dei trasporti, riducendo l’impatto ambientale, un pratico esempio è
                         l’impiego di veicoli elettrici (auto, biciclette, monopattini, ecc.).</Li>
-                    <Li>Smart Security: si riferisce all'integrazione di tecnologie innovative come l'Intelligenza
+                    <br>
+                    <Li><strong>Smart Security</strong>: si riferisce all'integrazione di tecnologie innovative come
+                        l'Intelligenza
                         Artificiale (IA) e l'Internet of Things (IoT) per migliorare la sicurezza urbana attraverso il
                         monitoraggio in tempo reale, la gestione proattiva delle minacce e la protezione delle
                         infrastrutture digitali. Le soluzioni includono sistemi di videosorveglianza avanzati con
@@ -267,36 +338,49 @@
                 </ul>
             </div>
 
-            <div id="SCyber">
+            <div id="SCyber" class="target-section">
                 <h3 class="inner-title" id="SCyber">Smart City e Cybersecurity:</h3>
                 <p class="text">Il massiccio impiego di IoT, Big Data e intelligenza Artificiale, portano con sé nuove e
-                    particolari sfide legate al campo della Cybersecurity, le infrastrutture interconnesse sono
+                    particolari sfide legate al <strong>campo della Cybersecurity</strong>, le infrastrutture
+                    interconnesse sono
                     vulnerabili
                     ad attacchi e incidenti informatici, con ripercussioni spesso imprevedibili e potenzialmente gravi.
+                    <br><br>
                     Molti di questi dispositivi vengono introdotti in progetti sperimentali dalle amministrazioni
                     pubbliche
                     e non sempre sono progettati per ricevere aggiornamenti di sicurezza costanti, rendendoli
                     vulnerabili
-                    nel lungo periodo; a ciò si aggiungono le criticità legate alla privacy dei cittadini: la raccolta
+                    nel lungo periodo; a ciò si aggiungono le <strong>criticità legate alla privacy dei
+                        cittadini</strong>: la raccolta
                     continua di informazioni personali tramite telecamere, sensori e app urbane solleva interrogativi
                     etici
-                    e giuridici. Le città intelligenti sono inoltre vulnerabili ad attacchi tradizionali come i Denial
-                    of
-                    Service (in cui si fanno esaurire deliberatamente le risorse di un sistema informatico che fornisce
+                    e giuridici. Le città intelligenti sono inoltre vulnerabili ad attacchi tradizionali come i <strong>
+                        Denial
+                        of
+                        Service
+                    </strong> (in cui si fanno esaurire deliberatamente le risorse di un sistema informatico che
+                    fornisce
                     un
                     servizio ai client fino a renderlo non più in grado di erogare il servizio ai client richiedenti),
-                    capaci di paralizzare servizi essenziali quali trasporti, acqua o emergenze, e a tecnologie invasive
+                    capaci di paralizzare servizi essenziali quali trasporti, acqua o emergenze, e a <strong>tecnologie
+                        invasive</strong>
                     (i
                     quali mettono in discussione diritti e libertà individuali).
-                    Per mitigare tali rischi, è necessario adottare strategie di cybersecurity avanzate: autenticazione
-                    forte, crittografia dei dati in transito e a riposo, segmentazione delle reti e standard
-                    internazionali
-                    condivisi. Tecniche di anonimizzazione e audit regolari (valutazioni sistematiche e programmate per
+                    <br><br>
+                    Per mitigare tali rischi, è necessario adottare strategie di cybersecurity avanzate: <strong>
+                        autenticazione
+                        forte, crittografia dei dati in transito e a riposo, segmentazione delle reti e standard
+                        internazionali
+                        condivisi
+                    </strong>. Tecniche di anonimizzazione e audit regolari (valutazioni sistematiche e programmate per
                     verificare la conformità a standard, norme e regolamenti, identificare vulnerabilità e aree di
                     miglioramento) rafforzano la protezione delle informazioni, mentre soluzioni innovative come la
-                    blockchain (database in cui i singoli record, denominati "blocchi", sono collegati tra loro
+                    <strong>blockchain</strong> (database in cui i singoli record, denominati "blocchi", sono collegati
+                    tra loro
                     utilizzando
-                    la crittografia) garantiscono trasparenza e immutabilità delle transazioni urbane. Tuttavia, la
+                    la crittografia) garantiscono trasparenza e immutabilità delle transazioni urbane.
+                    <br><br>
+                    Tuttavia, la
                     tecnologia da sola non basta: formazione e sensibilizzazione dei cittadini, insieme al loro
                     coinvolgimento nei processi decisionali, sono fondamentali per costruire una cultura della sicurezza
                     e
@@ -307,14 +391,17 @@
                 </p>
             </div>
 
-            <div id="Conclusioni">
+            <div id="Conclusioni" class="target-section">
                 <h3 class="inner-title" id="Conclusioni">Conclusione:</h3>
                 <p class="text">Le Smart Cities rappresentano una straordinaria opportunità di innovazione e
                     sostenibilità,
-                    ma la loro crescita dipende dalla capacità di bilanciare progresso tecnologico e tutela dei diritti.
+                    ma la loro crescita dipende dalla capacità di <strong>bilanciare progresso tecnologico e tutela dei
+                        diritti</strong>.
                     Solo adottando solide strategie di cybersecurity, garantendo trasparenza nella gestione dei dati e
-                    coinvolgendo attivamente i cittadini nei processi decisionali sarà possibile costruire città
-                    intelligenti sicure, resilienti e realmente inclusive.</p>
+                    coinvolgendo attivamente i cittadini nei processi decisionali sarà possibile costruire <strong>
+                        città
+                        intelligenti sicure, resilienti e realmente inclusive
+                    </strong>.</p>
             </div>
         </main>
 
@@ -325,7 +412,6 @@
             <p><br />Muccari Luigi - VE - I.T.T.S. E. Scalfaro</p>
         </footer>
     </div>
-
 
     <script src="scritp.js"></script>
 </body>

@@ -67,6 +67,12 @@
     object-fit: cover;
 }
 
+@media screen and (max-width: 1060px){
+    .first-title {
+        font-size: 70px;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .img-title,

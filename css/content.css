@@ -13,44 +13,30 @@ main.cont {
 .inner-title {
     margin-left: 80px;
     color: aliceblue;
-}
-
-.inner-title,
-.title {
     padding-top: 30px;
+    font-size: 30px;
     font-family: "Inter", sans-serif;
 }
 
-.title {
-    font-size: 50px;
-}
 
-.inner-title {
-    font-size: 30px;
-}
-
-p.text,
-li {
+p.text,.elencs li {
     font-family: "Inter", sans-serif;
     font-size: 20px;
     margin-right: 80px;
     color: rgb(184, 196, 206);
 }
 
-li {
+.elencs li {
     margin-left: 100px;
+    list-style-type: disc;
 }
 
-ul {
+.elencs {
     padding-bottom: 30px;
 }
 
 p.text {
     margin-left: 80px;
-}
-
-li {
-    list-style-type: circle;
 }
 
 .target-section {
@@ -69,12 +55,12 @@ li {
         margin-right: 15px;
     }
 
-    p.text, li {
+    p.text,.elencs li {
         margin-right: 15px;
         font-size: 18px;
     }
 
-    li {
+    .elencs li {
         margin-left: 45px;
     }
 }

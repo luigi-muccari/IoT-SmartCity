@@ -48,7 +48,7 @@ button:focus {
 }
 
 .buttonMenu:hover,
-.buttonMenu-1:focus {
+.buttonMenu:focus {
     background-color: rgb(40, 38, 48);
 }
 
@@ -80,14 +80,17 @@ button:focus {
     overflow-y: auto;
     overflow-x: hidden;
     width: 100%;
+    height: auto;
     font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .elenco li a {
     color: inherit;
     text-decoration: none;
     display: block;
-    padding: 10px 0;
+    padding: 10px;
     font-weight: bold;
     transition: color 0.2s ease;
 }

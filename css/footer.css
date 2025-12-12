@@ -20,19 +20,29 @@
     height: 25px;
 }
 
-.description {
+.social {
     display: flex;
     position: relative;
     gap: 20px;
 }
 
+.description {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 20px;
+}
+
 @media screen and (max-width: 768px) {
     .foot-row p {
-        font-size: 14px;
         text-align: center;
     }
 
     .foot-row {
         height: 80px;
+    }
+
+    .me{
+        font-size: 13px;
     }
 }

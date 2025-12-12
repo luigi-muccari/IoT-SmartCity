@@ -1,4 +1,4 @@
-Testo di presentazione aggiornato per il sito IoT & Smart City
+## Presentazione sito IoT & Smart City
 
 Il sito IoT & Smart City, realizzato da Luigi Muccari, nasce con l’obiettivo di offrire una panoramica completa e accessibile sul mondo dell’Internet of Things (IoT) e sul suo impatto nello sviluppo delle Smart Cities.
 Grazie alla sua struttura chiara e intuitiva, il portale accompagna il visitatore in un percorso che tocca i principali aspetti di queste tecnologie:
